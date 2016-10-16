@@ -14,6 +14,10 @@
 		251FDFAB1DB3736300BDDA4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251FDFA91DB3736300BDDA4E /* LaunchScreen.storyboard */; };
 		251FDFB41DB3745800BDDA4E /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFB31DB3745800BDDA4E /* TTMainViewController.m */; };
 		251FDFB71DB3746A00BDDA4E /* TTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFB61DB3746A00BDDA4E /* TTDetailViewController.m */; };
+		251FDFBB1DB3772F00BDDA4E /* PhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFBA1DB3772F00BDDA4E /* PhotoItem.m */; };
+		251FDFBF1DB377A000BDDA4E /* TTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFBE1DB377A000BDDA4E /* TTCollectionViewCell.m */; };
+		251FDFC31DB3783500BDDA4E /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFC21DB3783500BDDA4E /* JSONParser.m */; };
+		251FDFC61DB3786900BDDA4E /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFC51DB3786900BDDA4E /* DownloadManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,14 @@
 		251FDFB31DB3745800BDDA4E /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
 		251FDFB51DB3746A00BDDA4E /* TTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewController.h; sourceTree = "<group>"; };
 		251FDFB61DB3746A00BDDA4E /* TTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewController.m; sourceTree = "<group>"; };
+		251FDFB91DB3772F00BDDA4E /* PhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoItem.h; sourceTree = "<group>"; };
+		251FDFBA1DB3772F00BDDA4E /* PhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoItem.m; sourceTree = "<group>"; };
+		251FDFBD1DB377A000BDDA4E /* TTCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollectionViewCell.h; sourceTree = "<group>"; };
+		251FDFBE1DB377A000BDDA4E /* TTCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionViewCell.m; sourceTree = "<group>"; };
+		251FDFC11DB3783500BDDA4E /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		251FDFC21DB3783500BDDA4E /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
+		251FDFC41DB3786900BDDA4E /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		251FDFC51DB3786900BDDA4E /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,9 @@
 		251FDF8F1DB3736300BDDA4E = {
 			isa = PBXGroup;
 			children = (
+				251FDFC01DB3780800BDDA4E /* Helper/Manager */,
+				251FDFBC1DB3777500BDDA4E /* Views */,
+				251FDFB81DB3770D00BDDA4E /* Model */,
 				251FDFB51DB3746A00BDDA4E /* TTDetailViewController.h */,
 				251FDFB61DB3746A00BDDA4E /* TTDetailViewController.m */,
 				251FDFB21DB3745800BDDA4E /* TTMainViewController.h */,
@@ -82,6 +97,35 @@
 				251FDF9C1DB3736300BDDA4E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		251FDFB81DB3770D00BDDA4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				251FDFB91DB3772F00BDDA4E /* PhotoItem.h */,
+				251FDFBA1DB3772F00BDDA4E /* PhotoItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		251FDFBC1DB3777500BDDA4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				251FDFBD1DB377A000BDDA4E /* TTCollectionViewCell.h */,
+				251FDFBE1DB377A000BDDA4E /* TTCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		251FDFC01DB3780800BDDA4E /* Helper/Manager */ = {
+			isa = PBXGroup;
+			children = (
+				251FDFC11DB3783500BDDA4E /* JSONParser.h */,
+				251FDFC21DB3783500BDDA4E /* JSONParser.m */,
+				251FDFC41DB3786900BDDA4E /* DownloadManager.h */,
+				251FDFC51DB3786900BDDA4E /* DownloadManager.m */,
+			);
+			name = Helper/Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251FDFC31DB3783500BDDA4E /* JSONParser.m in Sources */,
+				251FDFBF1DB377A000BDDA4E /* TTCollectionViewCell.m in Sources */,
 				251FDFA01DB3736300BDDA4E /* AppDelegate.m in Sources */,
+				251FDFBB1DB3772F00BDDA4E /* PhotoItem.m in Sources */,
 				251FDFB71DB3746A00BDDA4E /* TTDetailViewController.m in Sources */,
 				251FDFB41DB3745800BDDA4E /* TTMainViewController.m in Sources */,
 				251FDF9D1DB3736300BDDA4E /* main.m in Sources */,
+				251FDFC61DB3786900BDDA4E /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

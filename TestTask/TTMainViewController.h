@@ -10,4 +10,11 @@
 
 @interface TTMainViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *TypedTextField;
+- (IBAction)SearchButtonPressed:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentView;
+- (IBAction)segmentControlTapped:(UISegmentedControl*)sender;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end

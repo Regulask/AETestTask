@@ -29,6 +29,9 @@
                                     <constraint firstAttribute="width" constant="90" id="Fac-8M-tAR"/>
                                 </constraints>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="SearchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2O-Dt-8Rv"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M7k-9X-bJ8">
                                 <segments>
@@ -36,6 +39,9 @@
                                     <segment title="2 columns"/>
                                     <segment title="3 columns"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentControlTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nlt-TJ-Nna"/>
+                                </connections>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xcE-QO-pmb">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,18 +52,32 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XfY-zA-Yog">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="XfY-zA-Yog" customClass="TTCollectionViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLh-Ys-i40"/>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="hLh-Ys-i40" secondAttribute="trailing" constant="-8" id="5xu-uJ-8Vw"/>
+                                            <constraint firstItem="hLh-Ys-i40" firstAttribute="leading" secondItem="XfY-zA-Yog" secondAttribute="leadingMargin" constant="-8" id="Tg5-E3-xz8"/>
+                                            <constraint firstItem="hLh-Ys-i40" firstAttribute="top" secondItem="XfY-zA-Yog" secondAttribute="topMargin" constant="-8" id="gIu-qP-YcA"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="hLh-Ys-i40" secondAttribute="bottom" constant="-8" id="rep-L7-2DB"/>
+                                        </constraints>
                                         <connections>
+                                            <outlet property="photoImageView" destination="hLh-Ys-i40" id="ZaC-oz-KOh"/>
                                             <segue destination="aJS-2S-mec" kind="presentation" identifier="showDetail" id="zML-p3-hri"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="txo-sb-ZrJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SXE-ZK-56B"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,6 +96,11 @@
                             <constraint firstItem="hSi-I7-55u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yZ8-w4-VoO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TypedTextField" destination="hSi-I7-55u" id="FiQ-aL-Ek2"/>
+                        <outlet property="collectionView" destination="xcE-QO-pmb" id="Fmp-qz-ih8"/>
+                        <outlet property="segmentView" destination="M7k-9X-bJ8" id="CL5-Kg-5UF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
