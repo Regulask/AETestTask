@@ -11,6 +11,7 @@
 #import "TTCollectionViewCell.h"
 #import "TTDetailViewController.h"
 #import "DownloadManager.h"
+#import "Reachability.h"
 
 static NSString * const reuseIdentifier = @"PhotoCell";
 
@@ -18,6 +19,7 @@ static NSString * const reuseIdentifier = @"PhotoCell";
 
 @property (nonatomic, strong) NSArray<PhotoItem *> *photos;
 @property (nonatomic, assign) int displayColumns;
+@property (nonatomic) Reachability *hostReachability;
 
 @end
 
@@ -27,6 +29,12 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     [super viewDidLoad];
     self.displayColumns =1;
     
+    //Reachability
+    NSString *remoteHostName = @"www.apple.com";
+    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+    [self.hostReachability startNotifier];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
     
 }
 
@@ -140,5 +148,52 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     
 }
 
+/*!
+ * Called by Reachability whenever status changes.
+ */
+- (void) reachabilityChanged:(NSNotification *)note
+{
+    Reachability* curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    if (reachability == self.hostReachability)
+    {
+        NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        switch (netStatus) {
+            case NotReachable:
+            {
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Cannot load data" message:@"Please check internet connection."
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * action) {
+                                                               }];
+                [alert addAction:cancel];
+                [self presentViewController:alert animated:YES completion:nil];
+                break;
+            }
+            case ReachableViaWWAN:
+            {
+                break;
+            }
+            case ReachableViaWiFi:
+            {
+                break;
+            }
+                
+            default:
+                break;
+        }
+    }
+    
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
+}
 
 @end

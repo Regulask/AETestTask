@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:self.imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.imageView.image = image;
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,5 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)closeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

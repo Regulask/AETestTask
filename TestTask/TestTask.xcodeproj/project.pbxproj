@@ -18,6 +18,7 @@
 		251FDFBF1DB377A000BDDA4E /* TTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFBE1DB377A000BDDA4E /* TTCollectionViewCell.m */; };
 		251FDFC31DB3783500BDDA4E /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFC21DB3783500BDDA4E /* JSONParser.m */; };
 		251FDFC61DB3786900BDDA4E /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFC51DB3786900BDDA4E /* DownloadManager.m */; };
+		251FDFC91DB387A700BDDA4E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFC81DB387A700BDDA4E /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		251FDFC21DB3783500BDDA4E /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
 		251FDFC41DB3786900BDDA4E /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		251FDFC51DB3786900BDDA4E /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		251FDFC71DB387A700BDDA4E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		251FDFC81DB387A700BDDA4E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 		251FDF8F1DB3736300BDDA4E = {
 			isa = PBXGroup;
 			children = (
+				251FDFCA1DB3884200BDDA4E /* Vendor */,
 				251FDFC01DB3780800BDDA4E /* Helper/Manager */,
 				251FDFBC1DB3777500BDDA4E /* Views */,
 				251FDFB81DB3770D00BDDA4E /* Model */,
@@ -126,6 +130,15 @@
 				251FDFC51DB3786900BDDA4E /* DownloadManager.m */,
 			);
 			name = Helper/Manager;
+			sourceTree = "<group>";
+		};
+		251FDFCA1DB3884200BDDA4E /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				251FDFC71DB387A700BDDA4E /* Reachability.h */,
+				251FDFC81DB387A700BDDA4E /* Reachability.m */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +220,7 @@
 				251FDFB71DB3746A00BDDA4E /* TTDetailViewController.m in Sources */,
 				251FDFB41DB3745800BDDA4E /* TTMainViewController.m in Sources */,
 				251FDF9D1DB3736300BDDA4E /* main.m in Sources */,
+				251FDFC91DB387A700BDDA4E /* Reachability.m in Sources */,
 				251FDFC61DB3786900BDDA4E /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

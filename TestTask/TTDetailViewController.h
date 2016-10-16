@@ -10,4 +10,9 @@
 
 @interface TTDetailViewController : UIViewController
 
+@property (nonatomic, strong) NSURL *imageURL;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+- (IBAction)closeButtonPressed:(id)sender;
+
 @end
