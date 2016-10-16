@@ -12,6 +12,8 @@
 		251FDFA61DB3736300BDDA4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251FDFA41DB3736300BDDA4E /* Main.storyboard */; };
 		251FDFA81DB3736300BDDA4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 251FDFA71DB3736300BDDA4E /* Assets.xcassets */; };
 		251FDFAB1DB3736300BDDA4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251FDFA91DB3736300BDDA4E /* LaunchScreen.storyboard */; };
+		251FDFB41DB3745800BDDA4E /* TTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFB31DB3745800BDDA4E /* TTMainViewController.m */; };
+		251FDFB71DB3746A00BDDA4E /* TTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 251FDFB61DB3746A00BDDA4E /* TTDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		251FDFA71DB3736300BDDA4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		251FDFAA1DB3736300BDDA4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		251FDFAC1DB3736300BDDA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251FDFB21DB3745800BDDA4E /* TTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMainViewController.h; sourceTree = "<group>"; };
+		251FDFB31DB3745800BDDA4E /* TTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMainViewController.m; sourceTree = "<group>"; };
+		251FDFB51DB3746A00BDDA4E /* TTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDetailViewController.h; sourceTree = "<group>"; };
+		251FDFB61DB3746A00BDDA4E /* TTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,10 @@
 		251FDF8F1DB3736300BDDA4E = {
 			isa = PBXGroup;
 			children = (
+				251FDFB51DB3746A00BDDA4E /* TTDetailViewController.h */,
+				251FDFB61DB3746A00BDDA4E /* TTDetailViewController.m */,
+				251FDFB21DB3745800BDDA4E /* TTMainViewController.h */,
+				251FDFB31DB3745800BDDA4E /* TTMainViewController.m */,
 				251FDF9A1DB3736300BDDA4E /* TestTask */,
 				251FDF991DB3736300BDDA4E /* Products */,
 			);
@@ -147,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				251FDFA01DB3736300BDDA4E /* AppDelegate.m in Sources */,
+				251FDFB71DB3746A00BDDA4E /* TTDetailViewController.m in Sources */,
+				251FDFB41DB3745800BDDA4E /* TTMainViewController.m in Sources */,
 				251FDF9D1DB3736300BDDA4E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
